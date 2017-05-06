@@ -12,12 +12,17 @@ h1.hometitle{
 
 body{
 	background-image: url("bg1.jpg");
+
 }
 
 body.homebody, div.wrapper{
 	background-image: url("img/bg1.jpg");
 }
 
+textarea {
+	text-align: left;
+
+}
 
 nav *, h1, h2, h3{
 	font-family: 'Josefin Sans', sans-serif;
@@ -45,14 +50,19 @@ h5{
 .form-group{
 	text-align: left;
 	vertical-align: middle;
+	position: relative;
 }
 
 .supportcontact{
 	background-color: hsla(60, 60%, 75%, 0.5);
 	margin-top: 20px;
-	text-align: center;
+	/*text-align: center;*/
 	vertical-align: middle;
 	line-height: 2em;
+}
+
+.supportcontact input {
+	text-align: left;
 }
 
 .longbox{
@@ -125,6 +135,10 @@ background-color: #D12020;
 	/*-webkit-transform: scale(1.2);*/
 }
 
+.form-control input {
+	text-align: left;
+}
+
 
 /*.bigaccounts {
 	margin-bottom: 200px;
@@ -142,6 +156,7 @@ div.sectionheading{
 *, div.sectionheading, h1, h2{
 	text-align: center;
 }
+
 
 .editbox, div.cards>div>div{
 	border:1px solid #DDD;
@@ -193,8 +208,18 @@ nav *, h1, h2{
     font-size: 16px;
     margin: 4px 2px;
   	cursor: pointer;
+		right: 20px;
 }
 
+.form-group button {
+	/*background-color: purple;*/
+	text-align: right;
+	position: absolute;
+	margin-top: 5px;
+	right: 4%;
+
+
+}
 
 
 
