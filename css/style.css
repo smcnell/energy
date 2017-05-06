@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1.hometitle{
+	color:green;
+}
+
+*{
+	box-sizing: border-box;
+	background-image: url("bg1.jpg");
+}
+
+body{
+	background-image: url("bg1.jpg");
+}
+
+body.homebody, div.wrapper{
+	background-image: url("img/bg1.jpg");
+}
+
+
+nav *, h1, h2, h3{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h3{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 18px;
+}
+
+h4{
+	color:red;
+	font-size: 24px;
+	font-weight: bold;
+}
+h5{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.form-group{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.supportcontact{
+	background-color: hsla(60, 60%, 75%, 0.5);
+	margin-top: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 2em;
+}
+
+.longbox{
+	background-color: hsla(200, 0%, 100%, 0.5);
+	border: 1px solid #CCC;
+	border-radius: 6px;
+}
+.longboxsub{
+	font-size: 16px;
+	vertical-align: middle;
+	text-align: left;
+}
+.olongbox{
+	background-color: hsla(200, 0%, 100%, 0.5);
+	margin-top:10px;
+	border: 1px solid #CCC;
+	border-radius: 6px;
+}
+.olongboxsub{
+	font-size: 13px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+p{
+	text-align: left;
+}
+p.bigred{
+	font-size: 28px;
+	color:red;
+}
+
+.managehead{
+	font-weight: bold;
+}
+
+.managerow{
+	border: 1px solid #DDD;
+	margin: 10px;
+}
+
+ul.navbar-left{
+	border-right-style: solid;
+	border-right-color: #A0A0A0;
+	border-right-width: 2px;
+}
+ul.local-nav{
+	font-size: 11px;
+}
+
+
+div.sectionheading{
+	color:white;
+	background-color: #D12020;
+	border-radius: 6px;
+}
+
+*, div.sectionheading, h1, h2{
+	text-align: center;
+}
+
+.editbox, div.cards>div>div{
+	border:1px solid #DDD;
+	padding:1em;
+}
+div.cards>div{
+	padding:1em;
+}
+/*.editbox{
+	border: 1px solid #DDD;
+	margin: 10px;
+	box-sizing: border-box;
+}*/
+
+hr{
+	margin-top: 0px;
+	border-width:medium;
+	color: #E4E0E0;
+}
+
+#chart{border:10px #000000;}
+
+
+
+
+nav *, h1, h2{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.button {
+    background-color: #DB0003;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  	cursor: pointer;
+}
+
+
+
+
+/*.messagebox{
+
+}*/
+
+/*.one{color: red;}
+.two{color: teal;}
+.three{color: green;}
+.four{color: orange;}
+.five{color: goldenrod;}
+.six{color: darkblue;}*/

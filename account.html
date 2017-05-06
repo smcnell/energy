@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+    <!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
+
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "date",
+					"dataDateFormat": "YYYY-MM",
+					"colors": [
+						"#D50000",
+						"#000000",
+						"#000000",
+						"#000000",
+						"#D50000",
+						"#D50000",
+						"#D50000",
+						"#000000",
+						"#000000",
+						"#000000",
+						"#000000",
+						"#D50000",
+						"#000000",
+						"#000000",
+						"#D50000",
+						"#D50000",
+						"#D50000",
+						"#D50000",
+						"#D50000",
+						"#D50000",
+						"#D50000"
+					],
+					"accessibleTitle": "chart1",
+					"addClassNames": true,
+					"classNamePrefix": "chart1",
+					"theme": "patterns",
+					"categoryAxis": {
+						"minPeriod": "MM",
+						"parseDates": true,
+						"position": "top"
+					},
+					"chartCursor": {
+						"enabled": true,
+						"categoryBalloonDateFormat": "MMM YYYY"
+					},
+					"chartScrollbar": {
+						"enabled": true
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"bullet": "round",
+							"fillColors": "#FF0000",
+							"fixedColumnWidth": -7,
+							"id": "AmGraph-1",
+							"lineColor": "#FF0000",
+							"lineThickness": 2,
+							"negativeFillAlphas": 0.36,
+							"negativeFillColors": "#FF0000",
+							"negativeLineAlpha": 0.41,
+							"negativeLineColor": "#FF0000",
+							"title": "graph 1",
+							"topRadius": 0.8,
+							"valueField": "column-1"
+						},
+						{
+							"bullet": "square",
+							"id": "AmGraph-2",
+							"title": "graph 2",
+							"valueField": "column-2"
+						},
+						{
+							"id": "AmGraph-3",
+							"title": "graph 3"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "kilo-Watt hours (kWh)"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"accessibleLabel": "chart1",
+						"labelText": "Monthly kWh Usage",
+						"labelWidth": 0,
+						"maxColumns": 12,
+						"rollOverColor": "#FF0000",
+						"rollOverGraphAlpha": 0.3,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "chartTitle1",
+							"size": 15,
+							"text": "Last 12 Months - Energy Consumption"
+						}
+					],
+					"dataProvider": [
+						{
+							"date": "2016-06",
+							"column-1": 8,
+							"column-2": 5
+						},
+						{
+							"date": "2016-07",
+							"column-1": 6,
+							"column-2": 7
+						},
+						{
+							"date": "2016-08",
+							"column-1": 2,
+							"column-2": 3
+						},
+						{
+							"date": "2016-09",
+							"column-1": 1,
+							"column-2": 3
+						},
+						{
+							"date": "2016-10",
+							"column-1": 2,
+							"column-2": 1
+						},
+						{
+							"date": "2016-11",
+							"column-1": 3,
+							"column-2": 2
+						},
+						{
+							"date": "2016-12",
+							"column-1": 6,
+							"column-2": 8
+						},
+						{
+							"date": "2017-01",
+							"column-1": "8",
+							"column-2": "5"
+						}
+					]
+				}
+			);
+		</script>
+
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<div class="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="myInverseNavbar2">
+
+			</div>
+
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+			  <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Account<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Login</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Make Payment</a></li>
+              <li><a href="#">Payment History & Details</a></li>
+              <li><a href="#">Payment Plan & Auto-Pay</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Edit Account</a></li>
+              <li><a href="#">Change Energy Sources</a></li>
+              <li><a href="#">Multiple Accounts Management</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">News & About<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Map</a></li>
+              <li><a href="#">FAQ & Help</a></li>
+              <li><a href="#">News & Updates</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Energy Sources (Educational)</a></li>
+              <li><a href="#">Company History</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Emergency<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Power Outage</a></li>
+              <li><a href="#">Emergency Dispatch</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Claim Reports</a></li>
+              <li><a href="#">Weather Damage Reports</a></li>
+
+
+            </ul>
+          </li>
+			  </ul>
+
+                 <ul class="nav navbar-nav local-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#plan">Payment Plan</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#makepayment">Make Payment</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#edit">Edit Account</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#manage">Manage Accounts</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#support">Support</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <!-- <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Scrolling Nav</h1>
+                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                    <a class="btn btn-default page-scroll" href="#overview">Click Me to Scroll Down!</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview-section">
+        <div class="container">
+          <div class="row">
+              <div class="sectionheading col-xs-12 col-lg-12">
+                  <h1>Account Overview</h1>
+              </div>
+          </div>
+          <div class="row">
+              <div class="data col-xs-12 col-lg-6">
+                <div class="row overviewrow">
+                  <div class="olongbox col-xs-12 col-lg-12">
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Account #:</span> 123456789</p>
+                        <p><span class="managehead">Type:</span> Home</p>
+                        <p><span class="managehead">Account ID:</span> JDU372S839298</p>
+                        <p><span class="managehead">Account Holder:</span> Jane Doe</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Address:</span> 1475 cedarhurst ave</p>
+                        <p><span class="managehead">City, State:</span> Charleston, SC</p>
+                        <p><span class="managehead">Phone #:</span> (843) 647-3748</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Energy Sources:</span> Solar Energy</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="row overviewrow">
+                  <div class="olongbox col-xs-12 col-lg-12">
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Account #:</span> 123456789</p>
+                        <p><span class="managehead">Type:</span> Home</p>
+                        <p><span class="managehead">Account ID:</span> JDU372S839298</p>
+                        <p><span class="managehead">Account Holder:</span> Jane Doe</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Address:</span> 1475 cedarhurst ave</p>
+                        <p><span class="managehead">City, State:</span> Charleston, SC</p>
+                        <p><span class="managehead">Phone #:</span> (843) 647-3748</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Energy Sources:</span> Solar Energy</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="row overviewrow">
+                  <div class="olongbox col-xs-12 col-lg-12">
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Account #:</span> 123456789</p>
+                        <p><span class="managehead">Type:</span> Home</p>
+                        <p><span class="managehead">Account ID:</span> JDU372S839298</p>
+                        <p><span class="managehead">Account Holder:</span> Jane Doe</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Address:</span> 1475 cedarhurst ave</p>
+                        <p><span class="managehead">City, State:</span> Charleston, SC</p>
+                        <p><span class="managehead">Phone #:</span> (843) 647-3748</p>
+                      </div>
+                      <div class="olongboxsub col-xs-4 col-lg-4">
+                        <p><span class="managehead">Energy Sources:</span> Solar Energy</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div  id="chartdiv" style="width: 45%; height: 560px; background-color: #F9F9F9;" class="chart1 col-xs-12 col-lg-6"></div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Plan Section -->
+    <section id="plan" class="plan-section">
+        <div class="container">
+            <div class="row">
+              <div class="sectionheading col-xs-12 col-lg-12">
+                  <h1>Payment Plan</h1>
+                  </div>
+			</div>
+			<div><br></div>
+                  <div class="col-xs-4 col-lg-4" align="left,center" style="border: 4px solid #D0D0D0; border">
+				<h2 style="font-size: 32px;">Current Plan </h2>
+				<div align="center">
+				<h3>One Engery Source:</h3>
+				<hr>
+				</div>
+				<div class="col-xs-6 col-sm-6" align="center">
+				<h6>Engery Source:</h6>
+				</div><div class="col-xs-6 col-sm-6" align="center">
+				<h6>Solar Engery</h6></div>
+				<div class="col-xs-6 col-sm-6" align="center">
+					<h6>Covarage:</h6>
+					</div><div class="col-xs-6 col-sm-6" align="center">
+					<h6>Four Rooms:</h6>
+
+				</div>
+
+				<div align="center">
+					<h3> Monthly Payment</h3>
+					<hr>
+				<p style="text-align: center"> Solar energy is radiant light and heat from the Sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, molten salt power plants and artificial photosynthesis .</p>
+				<hr>
+				<h3> Alternate Sources</h3>
+				<hr>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Wind</h6>
+					</div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Waste</h6></div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Lama Poop</h6>
+					</div>
+					<p style="text-align: center"> Your plan includes full covarage of damaged or any munfucations in the electric wiriring, machine work, cables, and appliances. 24 hours support center. If any questions or emergencies call 1-800-384-7483. All fees will be confimed and notrise. Any complicationss will be resolved.</p>
+					<h3>Estimated Cost</h3>
+					<p style="text-align: center">Caculated by past bills and energy tracking
+						not fully accurate</p>
+						<div align="center">
+							<h1>$120.21/mo.*</h1>
+							</div>
+							<div>
+					  <input type="button" class="button" value="Current Plan" style="background-color: #E64A4C;">
+					  </div>
+					  </div>
+
+			</div>
+
+					  <div class="col-xs-4 col-lg-4" align="left,center" style="border-top: 4px solid #D0D0D0; border-bottom: 4px solid #D0D0D0;">
+
+				<h2 style="font-size: 32px;">Uprgraded Plan </h2>
+				<div align="center">
+				<h3>One Engery Source:</h3>
+				<hr>
+				</div>
+				<div class="col-xs-6 col-sm-6" align="center">
+				<h6>Engery Source:</h6>
+				</div><div class="col-xs-6 col-sm-6" align="center">
+				<h6>Premium SE</h6></div>
+				<div class="col-xs-6 col-sm-6" align="center">
+					<h6>Covarage:</h6>
+					</div><div class="col-xs-6 col-sm-6" align="center">
+					<h6>Four Rooms:</h6>
+				</div>
+				<div align="center">
+				<h3> Monthly Payment</h3>
+				<hr>
+				<p style="text-align: center"> Solar energy is radiant light and heat from the Sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, molten salt power plants and artificial photosynthesis .</p>
+				<hr>
+				<h3> Alternate Sources</h3>
+				<hr>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Gemothermal</h6>
+					</div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Wave</h6></div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Wind</h6>
+					</div>
+					<p style="text-align:center"> Yout plan includes full covarage of damaged or any munfucations in the electric wiriring, machine work, cables, and appliances. 24 hours support center. If any questions or emergencies call 1-800-384-7483. All fees will be confimed and notrise. Any complicationss will be resolved.</p>
+					<h3>Estimated Cost</h3>
+					<p style="text-align: center">Caculated by past bills and energy tracking
+						not fully accurate</p>
+						<div align="center">
+							<h1>$234.23/mo.*</h1>
+							</div>
+							<div>
+					  <input type="button" class="button" value="Change Plan">
+					  </div>
+					  </div>
+			</div>
+			<div class="col-xs-4 col-lg-4" align="left,center" style="border: 4px solid #D0D0D0;" >
+				<h2 style="font-size: 32px;">Special Plan</h2>
+				<div align="center">
+				<h3>One Engery Source:</h3>
+				<hr>
+				</div>
+				<div class="col-xs-6 col-sm-6" align="center">
+				<h6>Engery Source:</h6>
+				</div><div class="col-xs-6 col-sm-6" align="center">
+				<h6>Solar Engery</h6></div>
+				<div class="col-xs-6 col-sm-6" align="center">
+					<h6>Covarage:</h6>
+					</div><div class="col-xs-6 col-sm-6" align="center">
+					<h6>Four Rooms:</h6>
+				</div>
+				<div align="center">
+				<h3> Monthly Payment</h3>
+				<hr>
+				<p style="text-align: center"> Solar energy is radiant light and heat from the Sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, molten salt power plants and artificial photosynthesis .</p>
+				<hr>
+				<h3> Alternate Sources</h3>
+				<hr>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Wind</h6>
+					</div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Waste</h6></div><div class="col-xs-12 col-sm-6 col-md-4">
+					<h6>Gemothermal</h6>
+					</div>
+					<p style="text-align: center"> Yout plan includes full covarage of damaged or any munfucations in the electric wiriring, machine work, cables, and appliances. 24 hours support center. If any questions or emergencies call 1-800-384-7483. All fees will be confimed and notrise. Any complicationss will be resolved.</p>
+					<h3>Estimated Cost</h3>
+					<p style="text-align: center">Caculated by past bills and energy tracking
+						not fully accurate</p>
+						<div align="center" style="color: #DB0003;">
+							<h1>$105.43/mo.*</h1>
+						</div>
+						<div>
+					  <input type="button" class="button" value="Change Plan">
+					  </div>
+					 </div>
+
+					 </div>
+
+					  </div>
+
+
+		 </section>
+
+
+
+     <!-- Make Payment Section -->
+     <section id="makepayment" class="makepayment-section">
+         <div class="container">
+             <div class="row">
+               <div class="sectionheading col-xs-12 col-lg-12">
+                   <h1>Make Payment</h1>
+               </div>
+             </div>
+             <div class="row">
+               <div class="paymentdetails col-xs-6 col-lg-4 col-lg-offset-1">
+                   <h3>Payment Information</h3>
+                   <div class="col-xs-12 col-lg-12" style="border: 3px solid #D2D2D2;">
+                 <div class="col-xs-6 col-lg-6 col-md-6">
+ 				  <h5> Ending in 874</h5>
+ 					<h5>Esp.08/21</h5>
+ 					<h5><u>Edit</u></h5>
+                 </div><div class="col-xs-6 col-lg-6 col-md-6 ">
+ 				  <h5> Billing</h5>
+                 <h7>1475 Cedarhurst Ave.
+                 <br>
+                 South Corana, Norway
+                 <br>
+ 					843-647-3748</h7>
+             <h5><u>Edit</u></h5>
+              </div>
+ 				  </div>
+               </div>
+               <div class="paymentdetails col-xs-6 col-lg-4 col-lg-offset-2">
+                   <h3>Plan Details</h3>
+                   <div class="col-xs-12 col-lg-12" style="border: 3px solid #D2D2D2;">
+ 					  <h5>1 Engery Source:</h5>
+ <div class="col-xs-6 col-sm-6" align="center">
+ 				<h8>Engery Source:</h8>
+ 				</div><div class="col-xs-6 col-sm-6" align="center">
+ 				<h8>Solar Engery</h8></div>
+ 				<div class="col-xs-6 col-sm-6" align="center">
+ 					<h8>Covarage:</h8>
+ 					</div><div class="col-xs-6 col-sm-6" align="center">
+ 					<h8>Four Rooms:</h8>
+ 					  </div>
+            <div>
+             <br>
+              <p style="text-align: center; font-size: 10px; font-style: italic">Solar energy is radiant light and heat from the Sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, molten salt power plants and artificial photosynthesis.</p>
+ 					  </div>
+               </div>
+             </div>
+             <div class="row">
+               <div class="paymentdetails col-xs-12 col-lg-4 col-lg-offset-4">
+                   <h3>Payment For: 4/26/17</h3>
+                   <h7>This is an early payment, any additionals fee will be added to the
+ 					  next bill</h7>
+ 				  <h8> Total:</h8>
+ 				  <h2 style="font-size: 32px; color: #FF0004;">$120.34</h2>
+                    <input type="button" class="button" value="Confirm Payment">
+               </div>
+             </div>
+         </div>
+ 		</div>
+     </section>
+
+     <!-- Edit Account Section -->
+     <section id="edit" class="edit-section">
+         <div class="container">
+             <div class="row">
+                 <div class="sectionheading col-xs-12 col-lg-12">
+                 <h1>Edit Account</h1>
+                 </div>
+
+                 <div class="row cards">
+                 <div class="col-xs-12 col-sm-6 col-md-4">
+                 <div clss="editbox">
+                 <h2>Personal Information</h2>
+                 <p><b>First Name:</b> Jane</p>
+                 <p><b>Last Name:</b> Doe</p>
+                 <p><b>Phone Number:</b> (306)925-4657</p>
+         <p><b>Email Address:</b> janedoe@gmail.com</p>
+         <p><b>Account Number:</b> 564681684</p>
+         <p><b>Account ID:</b> JD564681684</p>
+         <input type="button" class="button" value="Edit Personal" style="background-color: #E64A4C;">
+         </div>
+              </div>
+
+
+         <div class="col-xs-12 col-sm-6 col-md-4">
+           <div clss="editbox">
+         <h2>Address and Billing</h2>
+         <p><b>Street:</b> 1475 Cedarhurst Ave</p>
+         <p><b>City:</b> South Coldon</p>
+         <p><b>Sate:</b> Arborea</p>
+         <p><b>Zip-Code:</b> 87301</p>
+         <p><b>Email:</b> janedoe@gmail.com</p>
+         <p><b>Credit Card:</b> XXXX-XXXX-XXXX-4387</p>
+         <div class="checkbox">
+   <label><input type="checkbox" value="">Account Address is the same as Billing</label>
+ </div>
+         <input type="button" class="button" value="Edit Billing" style="background-color: #E64A4C;">
+         </div>
+           </div>
+
+
+         <div class="col-xs-12 col-sm-6 col-md-4">
+           <div clss="editbox">
+         <h2>Current Plan</h2>
+         <p>1 Energy Source:</p>
+        <p>Energy Source: Solar Energy</p>
+        <p>Coverage: Four Rooms</p>
+   <p>Solar Energy is radiant light and heat from the sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltacis, solar thermal energy, solar architecture. molten salt power plants and artificial photosynthesis.</p>
+        <input type="button" class="button" value="Edit Plan" style="background-color: #E64A4C;">
+          </div>
+           </div>
+
+
+
+         </div>
+     </section>
+
+    <!-- Services Section -->
+    <section id="manage" class="manage-section">
+        <div class="container">
+          <div class="row">
+              <div class="sectionheading col-xs-12 col-lg-12">
+                  <h1>Manage Accounts</h1>
+              </div>
+          </div>
+          <div class="row managerow">
+            <div class="longbox col-xs-12 col-lg-12">
+                <div class="longboxsub col-xs-6 col-lg-3">
+                  <p><span class="managehead">Account #:</span> 123456789</p>
+                  <p><span class="managehead">Type:</span> Home</p>
+                  <p><span class="managehead">Account ID:</span> JDU372S839298</p>
+                  <p><span class="managehead">Account Holder:</span> Jane Doe</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-3">
+                  <p><span class="managehead">Address:</span> 1475 cedarhurst ave</p>
+                  <p><span class="managehead">City, State:</span> Charleston, SC</p>
+                  <p><span class="managehead">Phone #:</span> (843) 647-3748</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Energy Sources:</span> Solar Energy</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Payment Info:</span> Card ending in *827</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Average Monthly</span></p>
+                  <p class="bigred">$120.21</p>
+                </div>
+            </div>
+          </div>
+          <div class="row managerow">
+            <div class="longbox col-xs-12 col-lg-12">
+                <div class="longboxsub col-xs-6 col-lg-3">
+                  <p><span class="managehead">Account #:</span> 123456789</p>
+                  <p><span class="managehead">Type:</span> Home</p>
+                  <p><span class="managehead">Account ID:</span> JDU372S839298</p>
+                  <p><span class="managehead">Account Holder:</span> Jane Doe</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-3">
+                  <p><span class="managehead">Address:</span> 1475 cedarhurst ave</p>
+                  <p><span class="managehead">City, State:</span> Charleston, SC</p>
+                  <p><span class="managehead">Phone #:</span> (843) 647-3748</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Energy Sources:</span> Solar Energy</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Payment Info:</span> Card ending in *827</p>
+                </div>
+                <div class="longboxsub col-xs-6 col-lg-2">
+                  <p><span class="managehead">Average Monthly</span></p>
+                  <p class="bigred">$120.21</p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support-section">
+      <div class="container">
+          <div class="row">
+            <div class="sectionheading col-xs-12 col-lg-12">
+                <h1>Support</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-xs-12 col-lg-6">
+              <label for="comment">Send us a quick message:</label>
+              <textarea class="form-control" rows="12" id="comment"></textarea>
+              <button type="button" class="btn btn-danger offset-lg-4 offset-xs-8">Send.</button>
+            </div>
+            <div class="supportcontact col-xs-12 col-lg-6">
+              <h4>Call Us</h4>
+              <h5>1800-555-1234</h5>
+            </div>
+            <div class="supportcontact col-xs-12 col-lg-6">
+              <h4>eMail Us</h4>
+              <h5>support@arkeon.com</h5>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+  </div>
+</body>
+
+</html>
