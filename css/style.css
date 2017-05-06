@@ -104,10 +104,24 @@ ul.local-nav{
 }
 
 
+.navbar-default .navbar-nav > li.dropdown:hover > a,
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+background-color: #D12020;
+	color: white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+background-color: #D12020;
+	color: white;
+}
+
 div.sectionheading{
 	color:white;
 	background-color: #D12020;
 	border-radius: 6px;
+	margin-top: 50px;
 }
 
 *, div.sectionheading, h1, h2{
@@ -133,8 +147,17 @@ hr{
 	color: #E4E0E0;
 }
 
-#chart{border:10px #000000;}
+#chart{
+	border:10px #000000;
+}
 
+#chartdiv {
+/*padding: 20px;*/
+margin: 10px;
+margin-bottom: 30px;
+border-radius: 1%;
+border: 1px solid #CCC;
+}
 
 
 
